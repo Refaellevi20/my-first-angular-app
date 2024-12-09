@@ -1,0 +1,50 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!-- animal-list.component.html -->
+
+<section class="animal-counter">
+  <section class="count-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Rate Animals</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let animal of animalInfos">
+          <td>{{ animal.type }}</td>
+          <td>{{ animal.count }}</td>
+          <td>
+            <a 
+              [href]="'https://www.google.com/search?q=' + animal.type" 
+              target="_blank"
+              rel="noopener noreferrer">
+              Search
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet />
+
+
+
