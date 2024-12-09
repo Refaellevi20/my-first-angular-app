@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component,OnDestroy } from '@angular/core'
 import { TimeService } from '../../time.service'
 
 @Component({
@@ -8,7 +8,7 @@ import { TimeService } from '../../time.service'
   templateUrl: './seasen-clock.component.html',
   styleUrl: './seasen-clock.component.scss'
 })
-export class SeasenClockComponent {
+export class SeasenClockComponent implements OnDestroy{
   realTime: Date = new Date()
   customTime: Date = new Date()
   secondsElapsed: number = 0
