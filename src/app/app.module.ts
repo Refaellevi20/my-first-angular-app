@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-root/app.component';
+import { SeasenClockComponent } from './cmps/seasen-clock/seasen-clock.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SeasenClockComponent
   ],
   imports: [
     BrowserModule,

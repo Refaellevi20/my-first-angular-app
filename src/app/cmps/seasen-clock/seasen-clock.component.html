@@ -1,0 +1,14 @@
+<section [ngClass]="['season-clock', getSeason(customTime.getMonth()), isDark ? 'dark' : '']">
+    <h2>{{ getSeason(customTime.getMonth()) }}</h2>
+    <img
+      (click)="onToggleDark()"
+      class="dark"
+      [src]="'img/' + getSeason(customTime.getMonth()) + '.png'"
+      alt="season"
+      style="cursor: pointer"
+    />
+    <h2>{{ getMonthName(customTime.getMonth()) }}</h2>
+    <h3>{{ getDayName(customTime.getDay()) }}</h3>
+    <p>{{ realTime.toLocaleTimeString() }}</p>
+  </section>
+  
