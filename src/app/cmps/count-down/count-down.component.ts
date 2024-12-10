@@ -44,9 +44,11 @@ export class CountDownComponent {
     this.currentTime = 12
     this.startClock()
   }
-  getCountClass(): string {
-    if (this.currentTime <= 6) return 'red'
-    return ''
+  getCountClass() {
+    if (this.currentTime > 5) return 'countdown-safe';
+    if (this.currentTime > 3) return 'countdown-warning';
+    if (this.currentTime > 0) return 'countdown-end countdown-flas';
+    return 'countdown-end';
   }
 }
 

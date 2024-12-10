@@ -1,3 +1,80 @@
 .red {
     color: red;
 }
+
+
+.countdown-header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .countdown-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 32px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* State styles */
+  .countdown-safe {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .countdown-warning {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .countdown-end {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-stop {
+    background-color: #ff4d4d;
+  }
+  
+  .btn-stop:hover {
+    background-color: #cc0000;
+  }
+  
+
+  @keyframes flash {
+    0%, 100% {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    50% {
+      background-color: #721c24;
+      color: #f8d7da;
+    }
+  }
+  
+  .countdown-flash {
+    animation: flash 0.5s infinite;
+  }

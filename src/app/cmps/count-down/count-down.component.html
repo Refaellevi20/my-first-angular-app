@@ -1,6 +1,6 @@
-<p>count-down works!</p>
-<div [class]="getCountClass()">
+<p class="countdown-header">Count-Down</p>
+<div [class]="getCountClass()" class="countdown-display">
     <p>{{ currentTime }}</p>
-  </div>
-<button (click)="startClock()">Start</button>
-<button (click)="stopClock()">Stop</button>
+</div>
+<button (click)="startClock()" class="btn">Start</button>
+<button (click)="stopClock()" class="btn btn-stop">Stop</button>

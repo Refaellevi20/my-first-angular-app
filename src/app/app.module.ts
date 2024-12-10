@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-root/app.component';
 import { SeasenClockComponent } from './cmps/seasen-clock/seasen-clock.component';
 import { CountDownComponent } from './cmps/count-down/count-down.component';
+import { MouseTrackerComponent } from './cmps/mouse-tracker/mouse-tracker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeasenClockComponent,
-    CountDownComponent
+    CountDownComponent,
+    MouseTrackerComponent
   ],
   imports: [
     BrowserModule,
