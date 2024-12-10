@@ -1,14 +1,15 @@
-<section [ngClass]="['season-clock', getSeason(customTime.getMonth()), isDark ? 'dark' : '']">
-    <h2>{{ getSeason(customTime.getMonth()) }}</h2>
-    <img
+<section  [ngClass]="['season-clock', getSeason(customTime.getMonth()), isDark ? 'dark' : '']">
+  <h2>{{ getSeason(customTime.getMonth()) }}</h2>
+  <!-- <img
       (click)="onToggleDark()"
       class="dark"
-      [src]="'img/' + getSeason(customTime.getMonth()) + '.png'"
+      src="../img/winter.png"
       alt="season"
       style="cursor: pointer"
-    />
-    <h2>{{ getMonthName(customTime.getMonth()) }}</h2>
-    <h3>{{ getDayName(customTime.getDay()) }}</h3>
-    <p>{{ realTime.toLocaleTimeString() }}</p>
-  </section>
-  
+    /> -->
+    <img *ngIf="imgSrc" [src]="imgSrc" alt="season-img" style="cursor: pointer" (click)="onToggleDark()">
+    <!-- <p>{{imgSrc}}</p> -->
+  <h2>{{ getMonthName(customTime.getMonth()) }}</h2>
+  <h3>{{ getDayName(customTime.getDay()) }}</h3>
+  <p>{{ realTime.toLocaleTimeString() }}</p>
+</section>
